@@ -112,7 +112,6 @@ function Play(){
 function reiniciar(){
     max_intentos = 6;
     intentos = 0;
-    document.getElementById("imagen_ahorcado").src = "img/ahorcado_assets/intento_0.png"; 
     palabra_censura = [];
     ref_intentos.classList.remove("intentoFallido"); 
     //Comprobamos si hay id almacenado, de ser asi, las reactivamos
@@ -142,6 +141,7 @@ function btn_home(){
 }
 
 function btn_reiniciar(){
+    document.getElementById("imagen_ahorcado").src = "img/ahorcado_assets/intento_0.png"; 
     reiniciar();
     modal_gameOver.style.display = "none";
     modal_winner.style.display = "none";
