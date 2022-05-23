@@ -87,7 +87,7 @@ function letraIncorrecta(){
     ref_intentos.classList.remove("intentoFallido");
     void ref_intentos.offsetWidth;
     ref_intentos.classList.add("intentoFallido");
-    document.getElementById("imagen_ahorcado").src = `img/ahorcado_assets/intento_${intentos}.png`; //Obtenemos el path y lo modificamos
+    document.getElementById("imagen_ahorcado").src = "img/ahorcado_assets/intento_"+intentos+".png"; //Obtenemos el path y lo modificamos
 }
 
 function gameOver(){
