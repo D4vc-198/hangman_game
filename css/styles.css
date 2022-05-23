@@ -118,9 +118,35 @@ hr{
 
 .keyword-section{
     width: 1200px;
-    margin: 40px auto;
+    margin: 75px auto;
     align-items: center;
     text-align: center;
+}
+
+.desistir-section {
+    margin: 25px auto;
+    width: 100%;
+    text-align: center;
+}
+
+.desistir {
+    font-family: 'Koulen', cursive;
+    color: white;
+    background-color: #E8A645;
+    border: none;
+    padding: 1px 20px;
+    letter-spacing: 3px;
+    border: 4px solid #784b44;
+    border-radius: 10px;
+    text-shadow: 2px 2px 8px #000;
+    cursor: pointer;
+    transition: 0.2s;
+    margin: 25px;
+}
+
+.desistir:hover{
+    transform: scale(1.1);
+
 }
 
 .letra{
@@ -394,7 +420,7 @@ input[type="text"]{
     }
   }
   
-  @keyframes animatetop {
+@keyframes animatetop {
     from {
         top:-300px;
         opacity:0
@@ -416,7 +442,6 @@ input[type="text"]{
 .close:hover{
     color: red;
 }
-
 
 .avatar{
     color: wheat;
@@ -500,9 +525,8 @@ ul{
 }
 
 
-/*Si la pantalla es menor o igual a 480px*/
-
-@media screen and (max-width:480px){
+/*pantalla es menor o igual a 480px*/
+@media screen and (max-width: 480px){
     .footer-container{
         width: 70%;
     }
@@ -527,8 +551,25 @@ ul{
         top: 10%;
     }
 
+    .desistir-section{
+        margin: 20px auto;
+        width: 100%;
+        text-align: center;
+    }
+
+    .desistir{
+        color: white;
+        background-color: #E8A645;
+        border: none;
+        padding: 5px 15px;
+        font-size: 18px;
+        border: 4px solid #784b44;
+        border-radius: 10px;
+        text-shadow: 2px 2px 8px #000;
+    }
+
     .keyword-section{
-        margin: 15px auto;
+        margin: 50px auto;
     }
 
     .letra{
@@ -544,5 +585,81 @@ ul{
     input[type="text"]{
         font-size: 16px;
         margin: 10px;
+    }
+}
+
+@media (max-width: 320px) {
+    .sprite-ahorcado{
+        width: 80px;
+    }
+
+    .card-word{
+        margin: 15px;
+        font-size: 18px;
+        width: 200px;
+        height: 100px;
+        border: 5px solid #784B44;
+    }
+
+    .resultado{
+        margin: 0 0;
+    }
+
+    .palabra-buscar{
+        margin: 10px 5px;
+    }
+
+    .keyword-section{
+        margin: 50px 0;
+    }
+
+    .desistir-section{
+        width: 100%;
+        text-align: center;
+        margin: 10px auto;
+    }
+
+    .desistir{
+        color: white;
+        background-color: #E8A645;
+        border: none;
+        padding: 0px 15px;
+        font-size: 18px;
+        border: 4px solid #784b44;
+        border-radius: 10px;
+        text-shadow: 2px 2px 8px #000;
+    }
+
+    .letra{
+        width: 35px;
+        height: 40px;
+        font-size: 17px;
+        margin: 3px 2px;
+    }
+
+    .modal-win-los{
+        top: -2%;
+    }
+
+    .modal-title{
+        font-size: 20px;
+    }
+
+    .msg_error{
+        width: 160px;
+    }
+
+    .msg_guardado{
+        width: 200px;
+    }
+
+    .msg_advertencia{
+        font-size: 19px;
+        width: 222px;
+    }
+
+    .footer-container{
+        width: 90%;
+        height: 70px;
     }
 }

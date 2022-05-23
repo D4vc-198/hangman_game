@@ -13,7 +13,7 @@ let ref_resultado = document.querySelector('#resultado');
 let ref_palabraCorrecta = document.querySelector("#correct_word");
 var startDiv = document.getElementById("start-game");
 var gameCanvas = document.getElementById("game-section");
-
+let title_gameOver = document.getElementById("title-gameOver");
 //MODAL REFERENCIAS
 var modal = document.getElementById("modal-config"); //obtenemos el modal
 var btn = document.getElementById("btn-modal"); //obtenemos el boton
@@ -117,6 +117,7 @@ function anim_msg_advertencia(){
 }
 
 function gameOver(){
+    title_gameOver.innerHTML = `¡Has perdido!`;
     modal_gameOver.style.display = "block";
     ref_palabraCorrecta.textContent = `${respuesta}`;
 }
@@ -125,6 +126,10 @@ function winner(){
     modal_winner.style.display = "block";
 }
 
+function rendirse(){
+    gameOver();
+    title_gameOver.innerHTML = `¡Te has rendido!`;
+}
 
 //MAIN MENU PLAY
 function Play(){

@@ -9,8 +9,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
         <title>Juego del ahorcado</title>
     </head>
     <body>
@@ -60,7 +59,7 @@
             <!--Modal Game Over-->
             <div id="modal-gameOver" class="modal">
                 <div class="modal-win-los">
-                    <h1 class="modal-title-gameOver">Has perdido!</h1>
+                    <h1 class="modal-title-gameOver" id="title-gameOver">Has perdido!</h1>
                     <img src="img/ahorcado_assets/head_loss.png"class="modal-loss-img">
                     <p class="correct">palabra correcta:</p>
                     <div id="correct_word" class="correct"></div>
@@ -95,8 +94,10 @@
                             <div id="resultado" class="resultado"></div>
                             <hr>
                         </div>
-
                         <p class=" " id="intentos">Intentos restantes: 0</p>
+                        <div class="desistir-section">
+                            <button class="desistir" onclick="rendirse()">Rendirse</button>
+                        </div>
                     </div>
                 </div>
                 <section class="keyword-section">
