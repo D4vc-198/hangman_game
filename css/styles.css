@@ -18,7 +18,7 @@ header{
 
 .btn-config img, 
 .btn-inicio-class img, 
-.btn-reiniciar img{
+.btn-reiniciar-class img{
     width: 50px;
     height: auto;
     transition: 0.5s;
@@ -234,7 +234,7 @@ hr{
 }
 
 .btn-inicio-class img, 
-.btn-reiniciar img{
+.btn-reiniciar-class img{
     width: 50px;
     height: auto;
     transition: 0.5s;
@@ -242,7 +242,7 @@ hr{
 }
 
 .btn-inicio-class img:hover, 
-.btn-reiniciar img:hover{
+.btn-reiniciar-class img:hover{
     cursor: pointer;
     transform: scale(1.2);
 }
