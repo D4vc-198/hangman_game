@@ -161,6 +161,18 @@ hr{
     display: none;
 }
 
+.formulario{
+    margin: 15px 0;
+    text-align: center;
+}
+
+.contenedor-palabras{
+    background-color: red;
+    width: 80%;
+    margin: auto;
+}
+
+
 #modal-gameOver{
     display: none;
 }
@@ -284,13 +296,92 @@ hr{
     padding: 15px;
     border: 10px solid #784B44;
     border-radius: 10px;
-    width: 40%;
+    width: 30%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
     animation-duration: 0.4s
 }
+
+#form{
+    font-size: 20px;
+    text-shadow: 2px 2px 8px #000;
+}
+
+input[type="text"]{
+    border-radius: 6px;
+    border: none;
+    /* font-size: 16px; */
+    /* background: green; */
+    /* color: white; */
+    padding: 5px 10px;
+}
+
+.btn-agregar-categoria{
+    border-radius: 6px;
+    border: none;
+    font-size: 16px;
+    background: green;
+    color: white;
+    padding: 5px 10px;
+    transition: 0.5s;
+}
+
+.btn-agregar-categoria:hover{
+    background-color: #0fc10f;
+    cursor: pointer;
+}
+
+.msg_error{
+    display: none;
+    margin: 5px auto;
+    padding: 5px;
+    width: 255px;
+    background-color: red;
+    border-radius: 10px;
+    animation-name: displayMessaje;
+    animation-duration: 0.4s
+}
+
+.msg_guardado{
+    display: none;
+    margin: 5px auto;
+    padding: 5px;
+    width: 255px;
+    background-color: green;
+    border-radius: 10px;
+    animation-name: displayMessaje;
+    animation-duration: 0.4s
+}
+
+.msg_advertencia{
+    display: none;
+    margin: 5px auto;
+    padding: 5px;
+    width: 255px;
+    background-color: rgb(226, 226, 30);
+    border-radius: 10px;
+    animation-name: displayMessaje;
+    animation-duration: 0.4s
+}
+
+@keyframes displayMessaje{
+    from{
+        opacity: 0;
+    } to{
+        opacity: 1;
+    }
+}
+
+.list-item{
+    border-bottom: 1px solid white;
+    padding: 5px 0px;
+    font-size: 20px;
+    text-shadow: 2px 2px 8px #000;
+}
+
+
 /* Animación modal */
 @-webkit-keyframes animatetop {
     from {
@@ -448,5 +539,10 @@ ul{
     }
     .sprite-section, .keyword-section{
         width: auto;
+    }
+
+    input[type="text"]{
+        font-size: 16px;
+        margin: 10px;
     }
 }

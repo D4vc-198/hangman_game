@@ -35,6 +35,25 @@
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <H2 class="modal-title">Administrar palabras</H2>
+                    <div class="formulario">
+                        <form id="form">
+                            <label for="nueva_palabra">Nueva palabra:</label>
+                            <input type="text" id="nueva_palabra" name="nueva_palabra" placeholder="ingrese la palabra aquí">
+                            <button class="btn-agregar-categoria" onclick="formValidation()">Guardar</button>
+                            <div id="mensaje" class="msg_error"></div>
+                            <div id="mensajeGuardado" class="msg_guardado"></div>
+                            <div id="mensajeAdvertencia" class="msg_advertencia"></div>
+                        </form>
+                    </div>
+
+                    <div id="contenedor-palabras">
+                        <ul id="lista-palabras-disp">
+                            <li class="list-item">PERRO</li>
+                            <li class="list-item">GATO</li>
+                            <li class="list-item">MOSCA</li>
+                            <li class="list-item">CABALLO</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 

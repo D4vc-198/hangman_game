@@ -1,6 +1,6 @@
 
 //JUEGO VARIABLES
-const listaPalabras = ['PERRO', 'GATO', 'SAPO', 'MOSCA', 'CABALLO', 'IGUANO', 'GALLO', 'GALLINA', 'ESCOBA'];
+const listaPalabras = ['PERRO', 'GATO', 'MOSCA', 'CABALLO'];
 let palabra_censura = [];
 let palabraAdivinar = [];
 let letrasUsadas = [];
@@ -21,6 +21,13 @@ var span = document.getElementsByClassName("close")[0]; //obtenemos el boton par
 var modal_gameOver = document.getElementById("modal-gameOver");
 var modal_winner = document.getElementById("modal-winner");
 
+//FORMULARIO PALABRAS
+let form = document.getElementById("form");
+let input = document.getElementById("nueva_palabra");
+let mensajeError = document.getElementById("mensaje");
+let mensajeSucces = document.getElementById("mensajeGuardado");
+let mensajeAdvertencia = document.getElementById("mensajeAdvertencia");
+let contenedorPalabras = document.getElementById("lista-palabras-disp");
 //MODAL 
 
 //JUEGO FUNCIONES
@@ -90,6 +97,25 @@ function letraIncorrecta(){
     document.getElementById("imagen_ahorcado").src = "img/ahorcado_assets/intento_"+intentos+".png"; //Obtenemos el path y lo modificamos
 }
 
+//Animacion mensaje error
+function anim_msg_error(){
+    mensajeError.classList.remove("msg_error");
+    void mensajeError.offsetWidth;
+    mensajeError.classList.add("msg_error");
+}
+//Animacion mensaje guardado
+function anim_msg_guardado(){
+    mensajeSucces.classList.remove("msg_guardado");
+    void mensajeSucces.offsetWidth;
+    mensajeSucces.classList.add("msg_guardado");
+}
+//Animacion mensaje advertencia
+function anim_msg_advertencia(){
+    mensajeAdvertencia.classList.remove("msg_advertencia");
+    void mensajeAdvertencia.offsetWidth;
+    mensajeAdvertencia.classList.add("msg_advertencia");
+}
+
 function gameOver(){
     modal_gameOver.style.display = "block";
     ref_palabraCorrecta.textContent = `${respuesta}`;
@@ -157,6 +183,53 @@ btn.onclick = function(){
 //Al hacer click en el span, el modal se cierra
 window.onclick = function(event){
     if(event.target == span){
+        mensajeError.style.display = "none";
+        mensajeAdvertencia.style.display = "none";
+        mensajeSucces.style.display = "none";
         modal.style.display = "none";
     }
+}
+
+
+
+//VALIDAMOS LA PALABRA
+function formValidation(word){
+    event.preventDefault();
+    word = input.value;
+    word = word.toUpperCase();
+
+    if (word === ""){
+        mensajeAdvertencia.style.display = "none"
+        mensajeSucces.style.display = "none";
+        mensajeError.style.display = "block";
+        anim_msg_error();
+        mensajeError.innerHTML = "ingrese una palabra";
+ 
+    } else {
+
+        if (listaPalabras.includes(word)){
+            mensajeError.style.display = "none";
+            mensajeSucces.style.display = "none";
+            mensajeAdvertencia.style.display = "block"
+            anim_msg_advertencia();
+            mensajeAdvertencia.innerHTML = "la palabra ya esta registrada"
+        } else {
+            console.log("correcto");
+            mensajeAdvertencia.style.display = "none";
+            mensajeError.style.display = "none";
+            mensajeSucces.style.display = "block";
+            anim_msg_guardado();
+            mensajeSucces.innerHTML = "¡Guardado con exito!";
+            registrarPalabra();
+        }
+    }
+}
+
+//AGREGAMOS LA PALABRA AL ARREGLO
+function registrarPalabra(){
+    let dato = input.value;
+    listaPalabras.push(dato.toUpperCase());
+    contenedorPalabras.innerHTML += `<li class="list-item">${dato}<li>`;
+    input.value = "";
+    console.log(listaPalabras);
 }
