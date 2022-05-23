@@ -25,7 +25,6 @@ var modal_winner = document.getElementById("modal-winner");
 
 //JUEGO FUNCIONES
 function iniciarJuego(){
-    document.getElementById("imagen_ahorcado").src = "img/ahorcado_assets/intento_0.png"; 
     let indiceAleatorio = Math.floor(Math.random() * listaPalabras.length); 
     let palabraAleatoria = listaPalabras[indiceAleatorio];
     respuesta = palabraAleatoria;
@@ -103,6 +102,7 @@ function winner(){
 
 //MAIN MENU PLAY
 function Play(){
+    document.getElementById("imagen_ahorcado").src = "img/ahorcado_assets/intento_0.png"; 
     startDiv.style.display = "none";
     gameCanvas.style.display = "block";
     iniciarJuego();

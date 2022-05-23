@@ -365,7 +365,7 @@ hr{
 footer{
     padding: 15px 0;
     text-align: center;
-    background: url("img/ahorcado_assets/ground.png");
+    background-image: url(/img/ahorcado_assets/ground.png);
     position: absolute;
     bottom: 0;
     width: 100%;
