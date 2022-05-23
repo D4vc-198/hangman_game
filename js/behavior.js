@@ -144,7 +144,7 @@ function btn_home(){
 
 function btn_reiniciar(){
     reiniciar();
-    document.getElementById("imagen_ahorcado").src = "img/ahorcado_assets/intento_"+intentos+".png"; //Obtenemos el path y lo modificamos
+    document.getElementById("imagen_ahorcado").src = "img/ahorcado_assets/intento_0.png"; //Obtenemos el path y lo modificamos
     modal_gameOver.style.display = "none";
     modal_winner.style.display = "none";
 }
