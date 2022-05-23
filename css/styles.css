@@ -16,9 +16,7 @@ header{
     cursor: pointer;
 }
 
-.btn-config img, 
-.btn-inicio-class img, 
-.btn-reiniciar-class img{
+.btn-config img {
     width: 50px;
     height: auto;
     transition: 0.5s;
@@ -233,19 +231,21 @@ hr{
 
 }
 
-.btn-inicio-class img, 
-.btn-reiniciar-class img{
+/*BOTONES*/
+.inicio img, 
+.reiniciar img{
     width: 50px;
     height: auto;
     transition: 0.5s;
     padding: 0 20px;
 }
 
-.btn-inicio-class img:hover, 
-.btn-reiniciar-class img:hover{
+.inicio img:hover, 
+.reiniciar img:hover{
     cursor: pointer;
     transform: scale(1.2);
 }
+/**/
 
 .contenedor-botones{
     width: 100%;
