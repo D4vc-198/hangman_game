@@ -104,9 +104,9 @@ function winner(){
 function Play(){
     startDiv.style.display = "none";
     gameCanvas.style.display = "block";
+    document.getElementById("imagen_ahorcado").src = "img/ahorcado_assets/intento_"+intentos+".png"; //Obtenemos el path y lo modificamos
     iniciarJuego();
     reiniciar();
-    document.getElementById("imagen_ahorcado").src = "img/ahorcado_assets/intento_0.png"; 
 }
 
 
@@ -142,7 +142,6 @@ function btn_home(){
 }
 
 function btn_reiniciar(){
-    document.getElementById("imagen_ahorcado").src = "img/ahorcado_assets/intento_0.png"; 
     reiniciar();
     modal_gameOver.style.display = "none";
     modal_winner.style.display = "none";
