@@ -1,11 +1,13 @@
 body{
     font-family: 'Koulen', cursive;
-    background-color: #A8DCF2;
+    background: url('../img/ahorcado_assets/background.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     /*background-color: #130035;*/
 }
-header{
-    background-color: #A8DCF2;
-}
+
 
 .btn-config{
     height: auto;
@@ -130,7 +132,8 @@ hr{
     margin: 5px 5px;
     border-radius: 5px;
     border: none;
-    background-color: #E8A645;
+    background-color: #f5b14c;
+    border: 3px solid #784b44;
     color: white;
     font-weight: bold;
     transition: 0.2s;
@@ -144,7 +147,7 @@ hr{
 }
 
 .letra:disabled{
-    background-color: #bf9961;
+    background-color: #321813b8;
 }
 
 .grid-item{
@@ -365,7 +368,7 @@ hr{
 footer{
     padding: 15px 0;
     text-align: center;
-    background-image: url('../img/ahorcado_assets/ground.png');
+    /*background-image: url('../img/ahorcado_assets/ground.png');*/
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -377,7 +380,7 @@ footer{
     text-align: center;
     margin: auto;
     margin-top: 14px;
-    border: 5px solid #FFF;
+    border: 5px solid #784B44;
     border-radius: 10px;
 }
 
@@ -410,9 +413,6 @@ ul{
 /*Si la pantalla es menor o igual a 480px*/
 
 @media screen and (max-width:480px){
-    body{
-        background-color: green;
-    }
     .footer-container{
         width: 70%;
     }
