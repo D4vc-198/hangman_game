@@ -365,7 +365,7 @@ hr{
 footer{
     padding: 15px 0;
     text-align: center;
-    background: url("/img/ground.png");
+    background: url("img/ground.png");
     position: absolute;
     bottom: 0;
     width: 100%;
