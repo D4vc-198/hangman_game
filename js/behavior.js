@@ -102,11 +102,11 @@ function winner(){
 
 //MAIN MENU PLAY
 function Play(){
-    document.getElementById("imagen_ahorcado").src = "img/ahorcado_assets/intento_0.png"; 
     startDiv.style.display = "none";
     gameCanvas.style.display = "block";
     iniciarJuego();
     reiniciar();
+    document.getElementById("imagen_ahorcado").src = "img/ahorcado_assets/intento_0.png"; 
 }
 
 
