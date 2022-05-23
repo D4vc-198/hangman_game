@@ -115,6 +115,7 @@ function reiniciar(){
     intentos = 0;
     palabra_censura = [];
     ref_intentos.classList.remove("intentoFallido"); 
+    document.getElementById("imagen_ahorcado").src = "img/ahorcado_assets/intento_"+intentos+".png"; //Obtenemos el path y lo modificamos
     //Comprobamos si hay id almacenado, de ser asi, las reactivamos
     if(letrasUsadas.length != 0){
         for(let i = 0; i <= letrasUsadas.length - 1; i++){
@@ -143,6 +144,7 @@ function btn_home(){
 
 function btn_reiniciar(){
     reiniciar();
+    document.getElementById("imagen_ahorcado").src = "img/ahorcado_assets/intento_"+intentos+".png"; //Obtenemos el path y lo modificamos
     modal_gameOver.style.display = "none";
     modal_winner.style.display = "none";
 }
