@@ -536,6 +536,10 @@ ul{
         max-width: 40px;
     }
 
+    .modal-content{
+        width: 70%;
+    }
+
     .sprite-ahorcado{
         max-width: 80px;
     }
@@ -557,7 +561,7 @@ ul{
     }
 
     .keyword-section{
-        margin: 50px 0;
+        margin: 100px 0;
         width: 100%;
     }
 
@@ -590,19 +594,29 @@ ul{
     }
 
     .modal-title{
-        font-size: 20px;
+        font-size: 18px;
+    }
+
+    #nueva-palabra{
+        margin: 10px 0;
+    }
+
+    .btn-agregar-categoria{
+        font-size: 15px;
     }
 
     .msg_error{
+        font-size: 15px;
         width: 160px;
     }
 
     .msg_guardado{
+        font-size: 15px;
         width: 200px;
     }
 
     .msg_advertencia{
-        font-size: 19px;
+        font-size: 15px;
         width: 222px;
     }
 
