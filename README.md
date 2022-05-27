@@ -1,4 +1,4 @@
-<h1 align="center">Oracle Challenge 2 - juego del ahorcado</h1>
+<h1 align="center">🏆 Alura-Oracle Challenge 2 - juego del ahorcado 🏆</h1>
 
 Requisitos:
 - Debe funcionar solo con letras mayúsculas;
