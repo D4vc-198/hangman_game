@@ -65,14 +65,14 @@ function inputUsuario(inputLetra, id){
     gameStatus(idBtn, letraUsuario);
     remplazarTexto();
 }
-/*
+
 //CHECK INPUT
 document.getElementById("nueva_palabra").addEventListener("input", (e) => {
     let value = e.target.value;
-    e.target.value = value.replace(/[^0-9]/g, "a");
+    e.target.value = value.replace(/[0-9]/g, "");
   });
-*/
 
+  
 function gameStatus(param_id, param_usr_letra){
     //GAME OVER
     if(!palabraAdivinar.includes(param_usr_letra)){
