@@ -37,7 +37,8 @@
                     <div class="formulario">
                         <form id="form">
                             <label for="nueva_palabra">Nueva palabra:</label>
-                            <input type="text" id="nueva_palabra" name="nueva_palabra" placeholder="ingrese la palabra aquí">
+                            <input type="text" id="nueva_palabra" name="nueva_palabra" placeholder="ingrese la palabra aquí" onkeypress="return(event.charCode >= 65 && event.charCode <= 90) ||(event.charCode >= 97 && event.charCode <= 122)"
+                            >
                             <button class="btn-agregar-categoria" onclick="formValidation()">Guardar</button>
                             <div id="mensaje" class="msg_error"></div>
                             <div id="mensajeGuardado" class="msg_guardado"></div>
