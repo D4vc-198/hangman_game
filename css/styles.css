@@ -526,7 +526,7 @@ ul{
 
 
 
-
+/*pantalla es menor o igual a 480px*/
 @media only screen and (max-width: 499px) {
     .logo-alura{
         max-width: 20px;
@@ -626,7 +626,7 @@ ul{
     }
 }
 
-/*pantalla es menor o igual a 480px*/
+
 @media only screen and (min-width: 500px){
     .sprite-ahorcado{
         max-width: 150px;
