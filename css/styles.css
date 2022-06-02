@@ -637,7 +637,7 @@ ul{
     }
 
     .modal-content{
-        min-width: 44%;
+        min-width: 220px;
     }
 
     .modal-title{
