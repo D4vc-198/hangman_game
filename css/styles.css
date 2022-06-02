@@ -644,10 +644,6 @@ ul{
         font-size: 25px;
     }
 
-    .modal{
-        position: absolute;
-    }
-
     .modal-win-los{
         top: 10%;
     }
