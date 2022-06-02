@@ -66,12 +66,6 @@ function inputUsuario(inputLetra, id){
     remplazarTexto();
 }
 
-//CHECK INPUT
-document.getElementById("nueva_palabra").addEventListener("input", (e) => {
-    let value = e.target.value;
-    e.target.value = value.replace(/[0-9]/g, "");
-  });
-
   
 function gameStatus(param_id, param_usr_letra){
     //GAME OVER
@@ -246,3 +240,20 @@ function registrarPalabra(){
     input.value = "";
     console.log(listaPalabras);
 }
+
+//Evento para la validación del input, detecta si se ingresan números
+document.getElementById("nueva_palabra").addEventListener("input", (e) => {
+    let value = e.target.value;
+    
+    e.target.value = value.replace(/[0-9]/g, "");
+
+    if(value.match(/[0-9]/g)){
+        mensajeSucces.style.display = "none";
+        mensajeError.style.display = "none";
+        mensajeAdvertencia.style.display = "block"
+        anim_msg_advertencia();
+        mensajeAdvertencia.innerHTML = "No se permiten numeros"
+    } else {
+        mensajeAdvertencia.style.display = "none"
+    }
+  });
